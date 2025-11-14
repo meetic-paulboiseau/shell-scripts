@@ -186,7 +186,7 @@ while IFS= read -r folder; do
 
   FOLDER_URL="$SRC_HOST/artifactory/api/storage/$SRC_REPO/$SRC_PATH/$folder"
   FILES_LIST=$(mktemp)
-  eval curl -sS $SRC_AUTH "\"$FOLDER_URL\"" | jq -r '.children[]? | select(.folder==false and (.uri | endswith(".tar.gz"))) | .uri' | sed 's#^/##' > "$FILES_LIST"
+  eval curl -sS $SRC_AUTH "\"$FOLDER_URL\"" | jq -r '.children[]? | select(.folder==false) | .uri' | sed 's#^/##' > "$FILES_LIST"
 
   while IFS= read -r file; do
     [ -z "$file" ] && continue
