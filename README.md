@@ -52,7 +52,7 @@ Replace `<SOURCE_TOKEN>` and `<DEST_TOKEN>` with real tokens before running.
   --source-user "p.boiseau" \
   --source-token "<SOURCE_TOKEN>" \
   --dest "https://artifactory-dal.i.mct360.com/ui/repos/tree/General/e2p-php-composer/ilius/php-pay-dictionary" \
-  --dest-user "n3m3s1s@match.corp" \
+  --dest-user "n3m3s1s" \
   --dest-token "<DEST_TOKEN>" \
   --no-dry-run
 ```
